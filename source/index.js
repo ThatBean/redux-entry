@@ -64,5 +64,3 @@ export {
   createStateStore,
   createStateStoreReducer
 }
-
-export default ReduxEntry

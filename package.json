@@ -1,33 +1,35 @@
 {
   "name": "redux-entry",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "[Redux Middleware] process dispatched action before it reaches the store",
-  "main": "index.js",
-  "scripts": {
-    "build": "cross-env NODE_ENV=production babel index.src.js -o index.js",
-    "build-dev": "cross-env babel index.src.js -o index.js -w",
-    "prepublish": "npm run build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ThatBean/redux-entry/"
-  },
+  "author": "ThatBean",
+  "license": "MIT",
   "keywords": [
     "redux",
     "middleware",
     "entry"
   ],
-  "author": "ThatBean",
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ThatBean/redux-entry/"
+  },
+  "main": "library/index.js",
+  "scripts": {
+    "build-dev": "cross-env NODE_ENV=development babel source --out-dir library -w",
+    "build": "cross-env NODE_ENV=production babel source --out-dir library",
+    "prepare": "npm run build"
+  },
   "devDependencies": {
-    "babel-cli": "^6.18.0",
-    "babel-eslint": "^7.1.0",
-    "babel-preset-es2015": "^6.18.0",
-    "babel-preset-stage-0": "^6.16.0",
-    "cross-env": "^3.1.3",
-    "eslint": "^3.8.1",
-    "eslint-config-standard": "^7.0.1",
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "cross-env": "^5.0.1",
+    "eslint": "^4.2.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.0",
     "eslint-plugin-promise": "^3.3.0",
-    "eslint-plugin-standard": "^2.0.1"
+    "eslint-plugin-standard": "^3.0.1"
   }
 }

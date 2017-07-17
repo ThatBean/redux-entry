@@ -25,8 +25,6 @@
 ##### import
 
 ```js
-import ReduxEntry from 'redux-entry'
-// OR
 import { ReduxEntry, createStateStore, createStateStoreReducer } from 'redux-entry'
 ```
 

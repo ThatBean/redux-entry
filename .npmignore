@@ -1,8 +1,3 @@
-# source
-index.src.js
-
-# config files
-.npmignore
-.babelrc
-.eslintrc
-.idea
+/.*
+/source
+/redux-entry*
