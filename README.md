@@ -4,7 +4,8 @@
 
 [Middleware](http://redux.js.org/docs/advanced/Middleware.html) for [Redux](http://redux.js.org/).
 
-#### Definition
+
+## Definition
 
 **Entry** is a function that:
  
@@ -18,53 +19,51 @@
    From there we have some feature like:
    - Block and Redirect `action` to another action type
    - Dispatch multiple `action` from one **Entry**
-   - dispatch to another **Entry**
+   - dispatch to another **Entry** (beware of dead loops)
 
-#### Usage
 
-##### import
+## Usage
 
 ```js
-import { ReduxEntry, createStateStore, createStateStoreReducer } from 'redux-entry'
+import { createReduxEntry, createStateStore, createStateStoreReducer } from 'redux-entry'
 ```
 
-##### `ReduxEntry`
+
+#### `ReduxEntry`
 
 ```js
 import { createStore, applyMiddleware, combineReducers } from 'redux'
-import { ReduxEntry } from 'redux-entry'
+import { createReduxEntry } from 'redux-entry'
 
 const reducer = (state = {}, action) => state // some sample reducer
 
-const reduxEntry = new ReduxEntry() // get ReduxEntry instance
+const { middleware: reduxEntryMiddleware, setEntry, setEntryMap } = createReduxEntry() // get ReduxEntry instance
 
 // add reduxEntry to middleware
 const store = createStore(
   reducer,
-  // null, // no initial state
-  applyMiddleware(reduxEntry.middleware)
+  // null, // no initialState
+  applyMiddleware(reduxEntryMiddleware)
 )
 
 // define some entryFunction
 const entryFunction0 = (store, action) => {}
 const entryFunction1 = ({dispatch, getState}, {type, payload}) => {}
-const entryFunction2 = ({dispatch, getState}, {type, payload}) => {}
 // and set
-reduxEntry.setEntry('action-type-to-precess-0', entryFunction0)
-reduxEntry.setEntry('action-type-to-precess-1', entryFunction1)
-reduxEntry.setEntry('action-type-to-precess-2', entryFunction2)
+setEntry('action-type-to-precess-0', entryFunction0)
+setEntry('action-type-to-precess-1', entryFunction1)
 
 // or pack them up
 const entryMap = {
   'action-type-to-precess-0': entryFunction0,
-  'action-type-to-precess-1': entryFunction1,
-  'action-type-to-precess-2': entryFunction2
+  'action-type-to-precess-1': entryFunction1
 }
 // and set
-reduxEntry.setEntryMap(entryMap)
+setEntryMap(entryMap)
 ```
 
-##### `createStateStore` and `createStateStoreReducer`
+
+#### `createStateStore` & `createStateStoreReducer`
 
 These are packed handy functions to create **mini-state-store**, if needed to.
 
@@ -136,6 +135,7 @@ const entryMap = {
 
 export { stateStore, reducer }
 ```
+
 
 #### License
 

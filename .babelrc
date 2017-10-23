@@ -1,6 +1,12 @@
 {
-  "presets": [
-    "stage-0",
-    "es2015"
-  ]
+  "env": {
+    "library": {
+      "presets": [ [ "env", { "targets": ">= 5%" } ] ],
+      "plugins": [ "transform-class-properties", [ "transform-object-rest-spread", { "useBuiltIns": true } ], [ "module-resolver", { "root": [ "./" ] } ] ]
+    },
+    "module": {
+      "presets": [ [ "env", { "targets": { "node": 8 }, "modules": false } ] ],
+      "plugins": [ "transform-class-properties", [ "transform-object-rest-spread", { "useBuiltIns": true } ], [ "module-resolver", { "root": [ "./" ] } ] ]
+    }
+  }
 }

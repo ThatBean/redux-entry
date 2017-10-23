@@ -1,3 +1,4 @@
+# source files
 /.*
+/*.tgz
 /source
-/redux-entry*
