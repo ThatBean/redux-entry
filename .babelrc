@@ -2,7 +2,7 @@
   "env": {
     "library": {
       "presets": [ [ "env", { "targets": ">= 5%" } ] ],
-      "plugins": [ "transform-class-properties", [ "transform-object-rest-spread", { "useBuiltIns": true } ], [ "module-resolver", { "root": [ "./" ] } ] ]
+      "plugins": [ "transform-class-properties", "transform-object-rest-spread", [ "module-resolver", { "root": [ "./" ] } ] ]
     },
     "module": {
       "presets": [ [ "env", { "targets": { "node": 8 }, "modules": false } ] ],

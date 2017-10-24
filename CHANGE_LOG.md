@@ -2,6 +2,25 @@
 
 --- --- --- --- --- --- --- --- --- --- --- --- ---
 
+## 0.1.1
+
+
+#### `createStateStore`
+
+drop `setState` auto merge `nextState`added in 0.1.0
+
+
+#### `createStateStoreReducer`
+
+will return state form `getState`, instead of direct return
+
+
+#### arguments check
+
+add arguments check for `createReduxEntry`, `createStateStore`
+
+--- --- --- --- --- --- --- --- --- --- --- --- ---
+
 ## 0.1.0
 
 
@@ -24,7 +43,7 @@ const reduxEntry = new ReduxEntry()
 ```
 
 
-#### `createStateStore`
+#### `createStateStore` [reverted in 0.1.1]
 
 `setState` now auto merge `nextState`:
 
