@@ -49,8 +49,22 @@ const createStateStoreReducer = (actionType, { getState, setState }) => (state, 
   return getState()
 }
 
+const createStateStoreMergeReducer = (actionType, { getState, setState }) => (state, { type, payload }) => { // the reducer, NOTE the action should be like `{ type, payload }`
+  type === actionType && setState(objectMerge(getState(), payload))
+  return getState()
+}
+
+const objectMerge = (object, merge) => {
+  for (const [ key, value ] of Object.entries(merge)) { // check if has new data
+    if (object[ key ] === value) continue
+    return { ...object, ...merge }
+  }
+  return object
+}
+
 export {
   createReduxEntry,
   createStateStore,
-  createStateStoreReducer
+  createStateStoreReducer,
+  createStateStoreMergeReducer
 }

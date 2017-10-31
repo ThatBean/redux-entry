@@ -1,6 +1,6 @@
 {
   "name": "redux-entry",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "[Redux Middleware] process dispatched action before it reaches the store",
   "author": "ThatBean",
   "license": "MIT",
