@@ -28,7 +28,7 @@ const createReduxEntry = () => {
     entryMap[ actionType ] = entryFunction
   }
 
-  const setEntryMap = (entryMap) => { for (const [ actionType, entryFunction ] of Object.entries(entryMap)) setEntry(actionType, entryFunction) }
+  const setEntryMap = (entryMap) => Object.keys(entryMap).forEach((actionType) => setEntry(actionType, entryMap[ actionType ]))
 
   return { middleware, setEntry, setEntryMap }
 }
@@ -50,16 +50,8 @@ const createStateStoreReducer = (actionType, { getState, setState }) => (state, 
 }
 
 const createStateStoreMergeReducer = (actionType, { getState, setState }) => (state, { type, payload }) => { // the reducer, NOTE the action should be like `{ type, payload }`
-  type === actionType && setState(objectMerge(getState(), payload))
+  type === actionType && setState({ ...getState(), ...payload })
   return getState()
-}
-
-const objectMerge = (object, merge) => {
-  for (const [ key, value ] of Object.entries(merge)) { // check if has new data
-    if (object[ key ] === value) continue
-    return { ...object, ...merge }
-  }
-  return object
 }
 
 export {

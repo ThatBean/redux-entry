@@ -913,7 +913,7 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
 
-cross-env@^5.1.0:
+cross-env@^5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-5.1.1.tgz#b6d8ab97f304c0f71dae7277b75fe424c08dfa74"
   dependencies:
@@ -986,9 +986,9 @@ detect-indent@^4.0.0:
   dependencies:
     repeating "^2.0.0"
 
-dev-dep-babel@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/dev-dep-babel/-/dev-dep-babel-0.0.5.tgz#59cd96f60d2a5ced62b122c0c7c72642ed4d6a2e"
+dev-dep-babel@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/dev-dep-babel/-/dev-dep-babel-0.0.6.tgz#701a38d9a0742d7be7461fc40e78925471db2d85"
   dependencies:
     babel-cli "^6.26.0"
     babel-core "^6.26.0"
@@ -998,11 +998,11 @@ dev-dep-babel@^0.0.5:
     babel-plugin-transform-object-rest-spread "^6.26.0"
     babel-preset-env "^1.6.1"
     babel-register "^6.26.0"
-    cross-env "^5.1.0"
-    eslint "^4.9.0"
+    cross-env "^5.1.1"
+    eslint "^4.10.0"
     eslint-config-standard "^10.2.1"
     eslint-plugin-import "^2.8.0"
-    eslint-plugin-node "^5.2.0"
+    eslint-plugin-node "^5.2.1"
     eslint-plugin-promise "^3.6.0"
     eslint-plugin-standard "^3.0.1"
     mocha "^4.0.1"
@@ -1078,7 +1078,7 @@ eslint-plugin-import@^2.8.0:
     minimatch "^3.0.3"
     read-pkg-up "^2.0.0"
 
-eslint-plugin-node@^5.2.0:
+eslint-plugin-node@^5.2.1:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-node/-/eslint-plugin-node-5.2.1.tgz#80df3253c4d7901045ec87fa660a284e32bdca29"
   dependencies:
@@ -1102,7 +1102,7 @@ eslint-scope@^3.7.1:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint@^4.9.0:
+eslint@^4.10.0:
   version "4.10.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.10.0.tgz#f25d0d7955c81968c2309aa5c9a229e045176bb7"
   dependencies:

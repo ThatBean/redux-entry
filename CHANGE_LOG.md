@@ -2,6 +2,12 @@
 
 --- --- --- --- --- --- --- --- --- --- --- --- ---
 
+## 0.1.3
+
+remove usage of `Object.entries()` since `babel-preset-env` will not polyfill.
+
+--- --- --- --- --- --- --- --- --- --- --- --- ---
+
 ## 0.1.2
 
 add `createStateStoreMergeReducer`
