@@ -2,6 +2,12 @@
 
 --- --- --- --- --- --- --- --- --- --- --- --- ---
 
+## 0.1.4
+
+do not expose `"module": "module/index.js"` in `package.json`
+
+--- --- --- --- --- --- --- --- --- --- --- --- ---
+
 ## 0.1.3
 
 remove usage of `Object.entries()` since `babel-preset-env` will not polyfill.

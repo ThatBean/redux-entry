@@ -1,6 +1,6 @@
 {
   "name": "redux-entry",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "[Redux Middleware] process dispatched action before it reaches the store",
   "author": "ThatBean",
   "license": "MIT",
@@ -17,7 +17,6 @@
     "dev-dep-babel": "^0.0.6"
   },
   "main": "library/index.js",
-  "module": "module/index.js",
   "scripts": {
     "library": "cross-env NODE_ENV=production BABEL_ENV=library babel ./source --out-dir ./library",
     "library-dev": "cross-env NODE_ENV=development BABEL_ENV=library babel ./source --out-dir ./library --watch",
