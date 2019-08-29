@@ -5,6 +5,12 @@
 [Middleware](http://redux.js.org/docs/advanced/Middleware.html) for [Redux](http://redux.js.org/).
 
 
+> # Note: the concept is useful, but an extra small package maybe not, consider grab the [source code](source/index.js) directly, and keep on hacking
+> 
+> At current state, the source code should be good enough for the concept, kind of like Redux.
+> So while this repo is archived, explore for more finer Redux usage should continue. 
+
+
 ## Definition
 
 **Entry** is a function that:
